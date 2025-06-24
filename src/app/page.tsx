@@ -16,6 +16,8 @@ import pubSkiGallery from '../../public/pub-skill.png';
 
 import chainWallet from '../../public/chain-wallet.png';
 
+import workClient from '../../public/work-client.png';
+
 const Home = () => {
   return (
     <main>
@@ -178,7 +180,7 @@ const Home = () => {
       </section>
 
       {/* YOUR SKILLS SECTION */}
-      <section className="mt-30 p-10">
+      <section className="py-20 p-10 bg-[#F1F1F1]">
         <div className="flex justify-between items-center mb-10">
           <p className="font-manrope text-xl font-bold">Your Skills NFTs</p>
 
@@ -306,6 +308,34 @@ const Home = () => {
               </span>
             </span>
           </span>
+        </div>
+
+        <div className="flex justify-center">
+          {' '}
+          <button className="border-2 border-gray-300 py-1 px-5 rounded-lg mt-5">
+            {' '}
+            Load more NFTs{' '}
+          </button>{' '}
+        </div>
+      </section>
+
+      {/* VERIFY WORK AS A CLIENT */}
+      <section className="flex items-center justify-between p-10 ">
+        <div className="flex flex-col gap-3">
+          <h1 className="font-manrope font-bold text-xl">
+            Verify work as a client
+          </h1>
+          <p className="w-[700px]">
+            Are you a client who needs to verify a freelancer’s work? Connect
+            your wallet to access pending Verification requests.
+          </p>
+          <button className="accessory-button text-white rounded-lg py-1 px-3 w-[160px]">
+            Connect as a client
+          </button>
+        </div>
+
+        <div>
+          <Image src={workClient} alt="" />
         </div>
       </section>
     </main>
