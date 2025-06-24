@@ -8,7 +8,7 @@ import logo from '../../../public/logo.png';
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center py-8 px-4">
+    <header className="flex justify-between items-center p-6 ">
       <nav className="flex items-center gap-1">
         <Image src={logo} alt="" />
         <p className="italic font-inter font-bold">SkillProof</p>
