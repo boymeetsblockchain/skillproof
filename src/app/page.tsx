@@ -1,7 +1,12 @@
+'use client';
+
 //IMPORTING HELPER COMPONENTS
 import Image from 'next/image';
 import Header from './components/header';
 import Footer from './components/footer';
+
+//IMPORTING HOOKS
+import { useRouter } from 'next/navigation';
 
 //IMPORTING PAGE ASSETS
 import completeWork from '../../public/complete-work.png';
@@ -21,9 +26,15 @@ import chainWallet from '../../public/chain-wallet.png';
 import workClient from '../../public/work-client.png';
 
 const Home = () => {
+  const router = useRouter();
+
+  const workAsAClient = () => {
+    router.push('/client-verification');
+  };
+
   return (
     <>
-    <Header />
+      <Header />
       <main>
         <section className="hero-background flex flex-col items-center justify-center gap-8 h-[703px]">
           <p className="font-bold font-manrope text-[#BE2BD8] border border-[#2A56C6] rounded-sm p-1">
@@ -341,7 +352,10 @@ const Home = () => {
               Are you a client who needs to verify a freelancer’s work? Connect
               your wallet to access pending Verification requests.
             </p>
-            <button className="accessory-button text-white rounded-lg py-1 px-3 w-[160px]">
+            <button
+              onClick={workAsAClient}
+              className="accessory-button text-white rounded-lg py-1 px-3 w-[160px] cursor-pointer"
+            >
               Connect as a client
             </button>
           </div>
