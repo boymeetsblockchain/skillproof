@@ -3,12 +3,12 @@ import { Manrope, Inter } from 'next/font/google';
 import './globals.css';
 
 const manrope = Manrope({
-  variable: '--font-geist-sans',
+  variable: '--font-manrope',
   subsets: ['latin'],
 });
 
 const inter = Inter({
-  variable: '--font-geist-mono',
+  variable: '--font-geist-inter',
   subsets: ['latin'],
 });
 
