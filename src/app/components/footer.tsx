@@ -2,6 +2,7 @@ import React from 'react';
 
 //IMPORTING HELPER COMPONENTS
 import Image from 'next/image';
+import Link from 'next/link';
 
 //IMPORTING PAGE ASSETS
 import logo from '../../../public/logo.png';

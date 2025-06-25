@@ -1,12 +1,21 @@
+'use client';
+
 import React from 'react';
 
 //IMPORTING HELPER COMPONENTS
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 //IMPORTING PAGE ASSETS
 import logo from '../../../public/logo.png';
 
 const Header = () => {
+  const router = useRouter();
+
+  const connectWallet = () => {
+    router.push('/request-verification');
+  };
+
   return (
     <header className="flex justify-between items-center p-6 ">
       <nav className="flex items-center gap-1">
@@ -24,7 +33,10 @@ const Header = () => {
       </nav>
 
       <nav>
-        <button className="bg-[#2A56C6] font-manrope text-white rounded-lg py-1 px-2">
+        <button
+          onClick={connectWallet}
+          className="bg-[#2A56C6] font-manrope text-white rounded-lg py-1 px-2"
+        >
           {' '}
           Connect Wallet{' '}
         </button>
