@@ -35,7 +35,7 @@ const Header = () => {
       <nav>
         <button
           onClick={connectWallet}
-          className="bg-[#2A56C6] font-manrope text-white rounded-lg py-1 px-2"
+          className="bg-[#2A56C6] font-manrope text-white rounded-lg py-1 px-2 cursor-pointer hover:scale-105 transition"
         >
           {' '}
           Connect Wallet{' '}

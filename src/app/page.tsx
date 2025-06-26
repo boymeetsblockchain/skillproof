@@ -354,7 +354,7 @@ const Home = () => {
             </p>
             <button
               onClick={workAsAClient}
-              className="accessory-button text-white rounded-lg py-1 px-3 w-[160px] cursor-pointer"
+              className="accessory-button text-white rounded-lg py-1 px-3 w-[160px] cursor-pointer hover:scale-105 transition"
             >
               Connect as a client
             </button>
