@@ -1,5 +1,11 @@
 import React from 'react';
 
+//IMPORTING HELPER COMPONENTS
+import Image from 'next/image';
+
+import link from '../../../public/link.png';
+import cloud from '../../../public/cloud.png';
+
 const RequestVerification = () => {
   return (
     <>
@@ -115,14 +121,34 @@ const RequestVerification = () => {
             </button>
           </div>
 
-          <div className="flex items-center justify-between">
-            <span className="flex flex-col gap-3 mt-10">
+          <div className="flex items-center justify-between gap-15">
+            <span className="flex flex-col gap-3 mt-10 w-full">
               <p className="font-manrope font-semibold">Attach Work Sample</p>
-              <span className="border-2 border-dashed border-gray-200 h-[225px] w-[556px] flex justify-center items-center"></span>
+              <span className="border-2 border-dashed border-gray-200 h-[225px] w-full rounded-lg flex flex-col gap-3 justify-center items-center">
+                <Image src={cloud} alt="" />
+                <p className="font-manrope font-semibold text-[#0000004D]">
+                  Drag and drop files here, or click to browse work
+                </p>
+                <p className="font-manrope font-semibold text-[#0000004D]">
+                  Max file size: 50mb (PNG, JPG, ZIP)
+                </p>
+              </span>
             </span>
-            <span className="flex flex-col gap-3 mt-10">
+
+            <span className="flex flex-col gap-3 mt-10 w-full">
               <p className="font-manrope font-semibold">Project Link</p>
-              <span className="border-2 border-dashed border-gray-200 h-[225px] w-[556px] flex justify-center items-center"></span>
+              <span className="border-2 border-dashed border-gray-200 h-[225px] w-full rounded-lg flex flex-col gap-3 justify-center items-center">
+                <input
+                  type="text"
+                  placeholder="https://github.com/yourproject"
+                  className="border-2 border-gray-300 rounded-md py-2 px-4"
+                />
+
+                <p className="flex items-center gap-1 font-manrope font-semibold text-[#0000004D]">
+                  <Image src={link} alt="" /> Paste a link to your completed
+                  work here
+                </p>
+              </span>
             </span>
           </div>
 
