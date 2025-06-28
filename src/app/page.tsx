@@ -29,7 +29,7 @@ const Home = () => {
   const router = useRouter();
 
   const workAsAClient = () => {
-    router.push('/client-verification');
+    router.push('/verification-panel');
   };
 
   return (
