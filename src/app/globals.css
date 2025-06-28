@@ -27,6 +27,14 @@
     #3f2888 66.59%
   );
 }
+.success-hero-background {
+  background: linear-gradient(
+    89.67deg,
+    #2a56c6 0.29%,
+    #8a36e9 93.57%,
+    #8e35ea 96.99%
+  );
+}
 
 .button-style {
   background: linear-gradient(

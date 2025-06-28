@@ -1,6 +1,11 @@
+'use client';
+
 //IMPORTING HELPER COMPONENTS
 import Header from '@/app/components/header';
 import Image from 'next/image';
+
+//IMPORTING HOOKS
+import { useRouter } from 'next/navigation';
 
 //IMPORTING PAGE ASSETS
 import workVeri from '../../../../public/work-veri.png';
@@ -15,10 +20,16 @@ import warning from '../../../../public/warning.png';
 import download from '../../../../public/download.png';
 
 const ClientVerificationPage = () => {
+  const router = useRouter();
+
+  const mintProject = (id: string) => {
+    router.push(`/successful-minting/${id}`);
+  };
+
   return (
     <>
       <Header />
-      <main className="py-10 px-10">
+      <main className="p-10">
         <section className="flex items-center gap-2">
           <Image src={workVeri} alt="" />
           <span>
@@ -164,11 +175,16 @@ const ClientVerificationPage = () => {
               </div>
 
               <div className="flex items-center justify-center gap-5">
-                <button className="font-manrope font-bold text-lg text-white bg-[#258634] rounded-sm py-2 px-6 flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    mintProject('1');
+                  }}
+                  className="font-manrope font-bold cursor-pointer text-lg text-white bg-[#258634] rounded-sm py-2 px-6 flex items-center gap-2"
+                >
                   <Image src={approve} alt="" /> Approve
                 </button>
 
-                <button className="font-manrope font-bold text-lg text-white bg-[#DF2020] rounded-sm py-2 px-6 flex items-center gap-2">
+                <button className="font-manrope font-bold cursor-pointer text-lg text-white bg-[#DF2020] rounded-sm py-2 px-6 flex items-center gap-2">
                   <Image src={reject} alt="" /> Reject
                 </button>
               </div>
