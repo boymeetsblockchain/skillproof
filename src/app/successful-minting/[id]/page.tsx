@@ -10,6 +10,11 @@ import miniWallet from '../../../../public/mini-wallet.png';
 import copy from '../../../../public/copy.png';
 import share from '../../../../public/share.png';
 import link from '../../../../public/link.png';
+import shareLink from '../../../../public/share-link.png';
+import linkedin from '../../../../public/linkedin.png';
+import twitter from '../../../../public/twitter.png';
+import whiteLink from '../../../../public/white-link.png';
+import whiteDownload from '../../../../public/white-download.png';
 
 const MintSuccessPage = () => {
   return (
@@ -145,8 +150,30 @@ const MintSuccessPage = () => {
         </div>
 
         {/* SHARE ACHIEVEMENT */}
-        <div>
-            
+        <div className="bg-[#2A56C626] py-10 px-20 shadow-xl rounded-lg mt-20">
+          <h1 className="flex items-center gap-2 font-manrop fonr-semibold text-xl">
+            {' '}
+            <Image src={shareLink} alt="" /> Share achievement
+          </h1>
+
+          <p className="font-manrope mt-8">
+            Let the world know about your verified projects
+          </p>
+
+          <div className="flex gap-10 mt-8">
+            <span className="flex items-center gap-2  py-2 px-4 bg-[#2A56C6] rounded-md text-white font-manrope font-bold cursor-pointer">
+              <Image src={linkedin} alt="" /> <p> Share on Linkedin </p>
+            </span>
+            <span className="flex items-center gap-2  py-2 px-4 bg-[#2A56C6] rounded-md text-white font-manrope font-bold cursor-pointer">
+              <Image src={whiteLink} alt="" /> <p> Copy Link </p>
+            </span>
+            <span className="flex items-center gap-2  py-2 px-4 bg-[#2A56C6] rounded-md text-white font-manrope font-bold cursor-pointer">
+              <Image src={twitter} alt="" /> <p> Share on Twitter </p>
+            </span>
+            <span className="flex items-center gap-2  py-2 px-4 bg-[#2A56C6] rounded-md text-white font-manrope font-bold cursor-pointer">
+              <Image src={whiteDownload} alt="" /> <p> Download </p>
+            </span>
+          </div>
         </div>
       </section>
     </main>
