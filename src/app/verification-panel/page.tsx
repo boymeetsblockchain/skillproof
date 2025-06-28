@@ -1,6 +1,15 @@
+'use client';
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 const VerificationsPanel = () => {
+  const router = useRouter();
+
+  const goToVerificationPage = (id: string) => {
+    router.push(`/verification-panel/${id}`);
+  };
+
   return (
     <main className="p-20">
       <h1 className="font-manrope font-bold text-2xl"> Veirifications </h1>
@@ -17,8 +26,13 @@ const VerificationsPanel = () => {
           </tr>
         </thead>
 
-        <tbody className="flex  flex-col w-full">
-          <tr className="text-center  flex items-center justify-between w-full py-3 border-b-2 border-gray-400">
+        <tbody className="flex  flex-col w-full py-3">
+          <tr
+            onClick={() => {
+              goToVerificationPage('1');
+            }}
+            className="text-center  flex items-center justify-between w-full py-3 border-b-2 border-gray-400 cursor-pointer"
+          >
             <td>
               {' '}
               <span className="bg-[#2A56C652] text-[#000000] p-2 rounded-sm flex items-center justify-center h-8 w-8">
